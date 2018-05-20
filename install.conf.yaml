@@ -1,0 +1,21 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig:
+        path: gitconfig
+        create: true
+        relink: false
+        force: true
+    ~/.vimrc:
+        path: vimrc
+        create: true
+        relink: false
+        force: true
+    ~/.zshrc:
+        path: zshrc
+        create: true
+        relink: false
+        force: true
+- shell:
+    [vim +PluginInstall +qall]
+    
