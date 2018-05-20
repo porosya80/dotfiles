@@ -68,6 +68,8 @@ antigen apply
  ENABLE_CORRECTION="true"
  COMPLETION_WAITING_DOTS="true"
 
+ SPACESHIP_RPROMPT_SEPARATE_LINE=true
+
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
