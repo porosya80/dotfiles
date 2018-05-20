@@ -68,7 +68,9 @@ antigen apply
  ENABLE_CORRECTION="true"
  COMPLETION_WAITING_DOTS="true"
 
- SPACESHIP_RPROMPT_SEPARATE_LINE=true
+ SPACESHIP_RPROMPT_SEPARATE_LINE="true"
+ spaceship_vi_mode_enable  
+ SPACESHIP_VI_MODE_COLOR="blue"
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Preferred editor for local and remote sessions

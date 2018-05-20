@@ -20,9 +20,10 @@ filetype plugin indent on
 set laststatus=2
 syntax enable
 set noshowmode
-if filereadable(expand("~/.vim/bundle/vim/colors/dracula.vim"))
+try
     color dracula
-endif
+catch
+endtry
 
 
 set wildmenu
