@@ -82,7 +82,7 @@ antigen apply
 
 # Example aliases
   alias zshconfig="vim ~/.zshrc"
-  alias python="python3.6"
+#  alias python="python3.6"
   alias va="source ./venv/bin/activate"
   alias vimconfig="vim /home/porosya/.vimrc" 
 
