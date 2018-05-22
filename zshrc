@@ -69,7 +69,7 @@ antigen apply
  COMPLETION_WAITING_DOTS="true"
 
  SPACESHIP_RPROMPT_SEPARATE_LINE="true"
-# spaceship_vi_mode_enable  
+ spaceship_vi_mode_disable 
 # SPACESHIP_VI_MODE_COLOR="blue"
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
