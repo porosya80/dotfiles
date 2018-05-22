@@ -51,7 +51,7 @@ antigen apply
   exec_time     # Execution time
   line_sep      # Line break
   battery       # Battery level and status
-  vi_mode       # Vi-mode indicator
+ # vi_mode       # Vi-mode indicator
   jobs          # Background jobs indicator
  # exit_code     # Exit code section
   char          # Prompt character
@@ -69,8 +69,8 @@ antigen apply
  COMPLETION_WAITING_DOTS="true"
 
  SPACESHIP_RPROMPT_SEPARATE_LINE="true"
- spaceship_vi_mode_enable  
- SPACESHIP_VI_MODE_COLOR="blue"
+# spaceship_vi_mode_enable  
+# SPACESHIP_VI_MODE_COLOR="blue"
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Preferred editor for local and remote sessions
