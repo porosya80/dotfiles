@@ -11,6 +11,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'dracula/vim'
 Plugin 'ervandew/supertab'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 
