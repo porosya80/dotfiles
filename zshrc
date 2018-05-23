@@ -13,7 +13,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting		
 antigen bundle djui/alias-tips
 antigen bundle vi-mode
-
+antigen bundle ggreer/the_silver_searcher
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 
@@ -70,6 +70,10 @@ antigen apply
 
  SPACESHIP_RPROMPT_SEPARATE_LINE="true"
  spaceship_vi_mode_disable 
+ export HISTSIZE=32768;
+ export HISTFILESIZE=$HISTSIZE;
+ export HISTCONTROL=ignoredups;
+ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 # SPACESHIP_VI_MODE_COLOR="blue"
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -82,7 +86,8 @@ antigen apply
 
 # Example aliases
   alias zshconfig="vim ~/.zshrc"
-#  alias python="python3.6"
+# alias python="python3.6"
   alias va="source ./venv/bin/activate"
   alias vimconfig="vim /home/porosya/.vimrc" 
-
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
