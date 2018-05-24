@@ -13,7 +13,6 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting		
 antigen bundle djui/alias-tips
 antigen bundle vi-mode
-antigen bundle ggreer/the_silver_searcher
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 
