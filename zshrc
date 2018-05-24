@@ -74,7 +74,10 @@ antigen apply
  export HISTFILESIZE=$HISTSIZE;
  export HISTCONTROL=ignoredups;
  export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+ export TERM=xterm-256color
+
 # SPACESHIP_VI_MODE_COLOR="blue"
+#
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Preferred editor for local and remote sessions

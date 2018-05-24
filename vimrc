@@ -31,7 +31,9 @@ try
     color dracula
 catch
 endtry
-
+if !has('gui_running')
+  set t_Co=256
+endif
 
 set wildmenu
 set hlsearch
