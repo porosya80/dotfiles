@@ -23,10 +23,10 @@
         force: true
 
 - shell:
-    [vim +PluginInstall +qall]
-    [chsh -s $(which zsh)]
-    [curl -L git.io/antigen > ~/antigen.zsh]
-    [git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim]
-    [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm]
+    -vim +PluginInstall +qall
+    -chsh -s $(which zsh)
+    -curl -L git.io/antigen > ~/antigen.zsh
+    -git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    -git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
