@@ -16,16 +16,14 @@
         create: true
         relink: false
         force: true
+    ~/.tmux.conf:
+        path: tmux.conf
+        create: true
+        relink: false
+        force: true
+
 - shell:
     [vim +PluginInstall +qall]
     
-- clean: ['~']
-
-- link:
-    ~/.tmux.conf:
-        path: tmux.conf
-        create: false
-        relink: false
-        force: false
 
 
