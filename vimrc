@@ -4,22 +4,25 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-
-
+"Plugin 'morhetz/gruvbox'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'itchyny/lightline.vim'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
 Plugin 'dracula/vim'
-Plugin 'ervandew/supertab'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mattn/emmet-vim'
-
+Plugin 'jiangmiao/auto-pairs'
 call vundle#end()
 
 
 " easy motion settings 
-let mapleader="\<space>"
+let mapleader=","
 let EasyMotion_smartcase = 1
-map <Leader> <plug>(easymotion-prefix)
+"map <Leader> <plug>(easymotion-prefix)
+
+"mapping for NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 filetype plugin indent on
 
@@ -28,13 +31,24 @@ set laststatus=2
 syntax enable
 set noshowmode
 try
-    color dracula
+    colorscheme dracula
+"     colorscheme gruvbox
+
 catch
 endtry
 if !has('gui_running')
   set t_Co=256
 endif
 
+"Settings fot grubox color scheme
+let g:gruvbox_contrast_dark='soft'
+set background=dark
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+let g:ycm_python_binary_path = '/usr/bin/python3'
+set incsearch
 set wildmenu
 set hlsearch
 set nomodeline
@@ -53,3 +67,4 @@ set pastetoggle=<F11>
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set clipboard+=unnamed

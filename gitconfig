@@ -1,3 +1,5 @@
 [user]
 	name = Dmytriy Myk
 	email = porosya@gmail.com
+[core]
+	autocrlf = input
