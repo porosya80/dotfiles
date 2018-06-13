@@ -49,6 +49,12 @@ let g:airline_theme='dracula'
 let g:airline_powerline_fonts = 1
 
 let g:ycm_python_binary_path = '/usr/bin/python3'
+"set paste
+
+
+
+
+set clipboard=unnamedplus
 set incsearch
 set wildmenu
 set hlsearch
