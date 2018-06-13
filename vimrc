@@ -41,10 +41,11 @@ if !has('gui_running')
 endif
 
 "Settings fot grubox color scheme
-let g:gruvbox_contrast_dark='soft'
-set background=dark
+"let g:gruvbox_contrast_dark='soft'
+"set background=dark
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='dracula'
 let g:airline_powerline_fonts = 1
 
 let g:ycm_python_binary_path = '/usr/bin/python3'
