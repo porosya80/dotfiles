@@ -12,7 +12,7 @@ antigen bundle pip
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting		
 antigen bundle djui/alias-tips
-antigen bundle vi-mode
+#antigen bundle vi-mode
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 
@@ -50,7 +50,7 @@ antigen apply
   exec_time     # Execution time
   line_sep      # Line break
   battery       # Battery level and status
- # vi_mode       # Vi-mode indicator
+#  vi_mode       # Vi-mode indicator
   jobs          # Background jobs indicator
  # exit_code     # Exit code section
   char          # Prompt character
@@ -68,7 +68,7 @@ antigen apply
  COMPLETION_WAITING_DOTS="true"
 
  SPACESHIP_RPROMPT_SEPARATE_LINE="true"
- spaceship_vi_mode_disable 
+ #spaceship_vi_mode_disable 
  export HISTSIZE=32768;
  export HISTFILESIZE=$HISTSIZE;
  export HISTCONTROL=ignoredups;
