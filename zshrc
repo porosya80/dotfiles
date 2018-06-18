@@ -94,3 +94,4 @@ antigen apply
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
   alias tmux='tmux attach || tmux new'  
+  alias reg='chsh -s $(which zsh)'
