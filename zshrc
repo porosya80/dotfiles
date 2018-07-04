@@ -2,7 +2,7 @@ source ~/antigen.zsh
 antigen use oh-my-zsh
 
 
-
+antigen bundle gjango
 antigen bundle ssh-agent
 antigen bundle sublime
 antigen bundle git
@@ -12,7 +12,6 @@ antigen bundle pip
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting		
 antigen bundle djui/alias-tips
-#antigen bundle vi-mode
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 
@@ -85,13 +84,17 @@ antigen apply
  else
    export EDITOR='vim'
  fi
-
+#  eval `dircolors /home/porosya/.dir_colors/dircolors'
 # Example aliases
   alias zshconfig="vim ~/.zshrc"
 # alias python="python3.6"
-  alias va="source ./venv/bin/activate"
   alias vimconfig="vim /home/porosya/.vimrc" 
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
   alias tmux='tmux attach || tmux new'  
   alias reg='chsh -s $(which zsh)'
+  alias venv-init='test -d venv && echo"Virtualvenv alredr exists." || python3 -m venv venv'
+  alias venv-stop='deactivate'
+  alias va='test -d venv && source ./venv/bin/activate || echo "No Virtualenv in current folder."'
+  alias djm="python3 manage.py"
+  alias djs="python3 manage.py runserver"
