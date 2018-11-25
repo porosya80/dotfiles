@@ -12,6 +12,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 # antigen bundle owenstranathan/pipenv.zsh
 antigen bundle zsh-users/zsh-syntax-highlighting		
 antigen bundle djui/alias-tips
+antigen bundle z
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 
@@ -25,7 +26,7 @@ antigen apply
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
-  #git           # Git section (git_branch + git_status)
+  git           # Git section (git_branch + git_status)
   # hg            # Mercurial section (hg_branch  + hg_status)
   # package       # Package version
   # node          # Node.js section
@@ -38,11 +39,11 @@ antigen apply
   # rust          # Rust section
   # haskell       # Haskell Stack section
   # julia         # Julia section
-  # docker        # Docker section
+  docker        # Docker section
   # aws           # Amazon Web Services section
-  # venv          # virtualenv section
-  # conda         # conda virtualenv section
-  # pyenv         # Pyenv section
+  venv          # virtualenv section
+  conda         # conda virtualenv section
+  pyenv         # Pyenv section
   # dotnet        # .NET section
   # ember         # Ember.js section
   # kubecontext   # Kubectl context section
@@ -87,7 +88,6 @@ antigen apply
 #  eval `dircolors /home/porosya/.dir_colors/dircolors'
 # Example aliases
   alias zshconfig="vim ~/.zshrc"
-# alias python="python3.6"
   alias vimconfig="vim /home/porosya/.vimrc" 
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
@@ -99,3 +99,4 @@ antigen apply
   alias djm="python3 manage.py"
   alias djs="python3 manage.py runserver"
   export PATH=~/.local/bin:$PATH
+# eval "$(pipenv --completion)"
