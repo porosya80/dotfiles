@@ -42,8 +42,8 @@ antigen apply
   docker        # Docker section
   # aws           # Amazon Web Services section
   venv          # virtualenv section
-  conda         # conda virtualenv section
-  pyenv         # Pyenv section
+  #conda         # conda virtualenv section
+  #pyenv         # Pyenv section
   # dotnet        # .NET section
   # ember         # Ember.js section
   # kubecontext   # Kubectl context section
@@ -99,4 +99,4 @@ antigen apply
   alias djm="python3 manage.py"
   alias djs="python3 manage.py runserver"
   export PATH=~/.local/bin:$PATH
-# eval "$(pipenv --completion)"
+  export PATH=/home/porosya/opt/platform-tools:$PATH
