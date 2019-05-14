@@ -6,7 +6,7 @@ antigen bundle django
 antigen bundle debian
 antigen bundle ssh-agent
 antigen bundle git
-antigen bundle autojump
+# antigen bundle autojump
 antigen bundle pip
 antigen bundle zsh-users/zsh-autosuggestions
 # antigen bundle owenstranathan/pipenv.zsh
