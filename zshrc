@@ -99,4 +99,5 @@ antigen apply
   alias djm="python3 manage.py"
   alias djs="python3 manage.py runserver"
   export PATH=~/.local/bin:$PATH
+  export PATH=~/.local/lib:$PATH
   export PATH=/home/porosya/opt/platform-tools:$PATH
