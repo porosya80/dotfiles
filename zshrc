@@ -39,7 +39,7 @@ antigen apply
   # rust          # Rust section
   # haskell       # Haskell Stack section
   # julia         # Julia section
-  docker        # Docker section
+  # docker        # Docker section
   # aws           # Amazon Web Services section
   venv          # virtualenv section
   #conda         # conda virtualenv section
@@ -56,7 +56,8 @@ antigen apply
   char          # Prompt character
 )
   SPACESHIP_RPROMPT_ORDER=(
-   git
+    git
+    docker
    #venv
    #pyenv
 
@@ -68,15 +69,30 @@ antigen apply
  COMPLETION_WAITING_DOTS="true"
 
  SPACESHIP_RPROMPT_SEPARATE_LINE="true"
- #spaceship_vi_mode_disable 
- export HISTSIZE=32768;
- export HISTFILESIZE=$HISTSIZE;
- export HISTCONTROL=ignoredups;
- export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
  export TERM=xterm-256color
 
-# SPACESHIP_VI_MODE_COLOR="blue"
-#
+# Save history so we get auto suggestions
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
+# Options
+setopt auto_cd # cd by typing directory name if it's not a command
+setopt auto_list # automatically list choices on ambiguous completion
+setopt auto_menu # automatically use menu completion
+setopt always_to_end # move cursor to end if word had one match
+setopt hist_ignore_all_dups # remove older duplicate entries from history
+setopt hist_reduce_blanks # remove superfluous blanks from history items
+setopt inc_append_history # save history entries as soon as they are entered
+setopt share_history # share history between different instances
+setopt correct_all # autocorrect commands
+setopt interactive_comments # allow comments in interactive shells
+# Improve autocompletion style
+zstyle ':completion:*' menu select # select completions with arrow keys
+zstyle ':completion:*' group-name '' # group results by category
+zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
+
+
+
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Preferred editor for local and remote sessions
@@ -108,7 +124,7 @@ antigen apply
   export PIPENV_VERBOSITY=-1
   NPM_PACKAGES="${HOME}/.npm-packages"
 
-    export PATH="$NPM_PACKAGES/bin:$PATH"
+  export PATH="$NPM_PACKAGES/bin:$PATH"
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
     unset MANPATH # delete if you already modified MANPATH elsewhere in your config

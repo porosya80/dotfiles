@@ -283,7 +283,8 @@ set -g mouse on
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 set -g status-keys vi
-set -g mode-keys vi
+setw -g mode-keys vi
+
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
@@ -301,6 +302,12 @@ bind -n M-Down select-pane -D
 # Shift arrow to switch windows
 bind -n S-Left  previous-window
 bind -n S-Right next-window
+
+# Alt-vim keys without prefix key to switch panes
+bind -n M-h select-pane -L
+bind -n M-j select-pane -D 
+bind -n M-k select-pane -U
+bind -n M-l select-pane -R
 
 # move status line to top
 #set -g status-position top
