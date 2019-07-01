@@ -1,7 +1,7 @@
 source ~/antigen.zsh
 antigen use oh-my-zsh
 
-# antigen bundle pipenv
+antigen bundle pipenv
 antigen bundle django
 #antigen bundle debian
 antigen bundle ssh-agent
