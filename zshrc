@@ -3,7 +3,7 @@ antigen use oh-my-zsh
 
 # antigen bundle pipenv
 antigen bundle django
-antigen bundle debian
+#antigen bundle debian
 antigen bundle ssh-agent
 antigen bundle git
 # antigen bundle autojump
@@ -93,11 +93,23 @@ antigen apply
   alias pbpaste='xclip -selection clipboard -o'
   alias tmux='tmux attach || tmux new'  
   alias reg='chsh -s $(which zsh)'
+  if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+      source ~/.config/exercism/exercism_completion.zsh
+  fi
 #  alias venv-init='test -d venv && echo"Virtualvenv alredr exists." || python3 -m venv venv'
+#
 #  alias venv-stop='deactivate'
 #  alias va='test -d venv && source ./venv/bin/activate || echo "No Virtualenv in current folder."'
   alias djm="python3 manage.py"
   alias djs="python3 manage.py runserver"
   export PATH=~/.local/bin:$PATH
+  export PATH=~/.bin:$PATH
   export PATH=~/.local/lib:$PATH
-  export PATH=/home/porosya/opt/platform-tools:$PATH
+  export PIPENV_VERBOSITY=-1
+  NPM_PACKAGES="${HOME}/.npm-packages"
+
+    export PATH="$NPM_PACKAGES/bin:$PATH"
+
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+    unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+    export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
