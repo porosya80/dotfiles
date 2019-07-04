@@ -1,24 +1,27 @@
-source ~/antigen.zsh
-antigen use oh-my-zsh
+autoload -Uz compinit
 
-#antigen bundle pipenv
-antigen bundle django
-#antigen bundle debian
-#antigen bundle ssh-agent
-antigen bundle git
-# antigen bundle autojump
-antigen bundle pip
-antigen bundle zsh-users/zsh-autosuggestions
-# antigen bundle owenstranathan/pipenv.zsh
-antigen bundle zsh-users/zsh-syntax-highlighting		
-antigen bundle djui/alias-tips
-antigen bundle z
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || 
+stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
+  compinit -i
+else
+  compinit -C -i
+fi
+
+zmodload -i zsh/complist
+
+export PATH=~/.local/bin:~/.bin:~/.local/lib:$PATH
 
 
-antigen apply
-  
-  
+
+source <(antibody init)
+antibody bundle robbyrussell/oh-my-zsh path:plugins/django
+antibody bundle robbyrussell/oh-my-zsh path:plugins/git
+antibody bundle robbyrussell/oh-my-zsh path:plugins/z
+antibody bundle zsh-users/zsh-autosuggestions
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle djui/alias-tips
+antibody bundle denysdovhan/spaceship-prompt  
   
   
   SPACESHIP_PROMPT_ORDER=(
@@ -69,7 +72,9 @@ antigen apply
  COMPLETION_WAITING_DOTS="true"
 
  SPACESHIP_RPROMPT_SEPARATE_LINE="true"
- export TERM=xterm-256color
+
+export TERM=xterm-256color
+export PIPENV_VERBOSITY=-1
 
 # Save history so we get auto suggestions
 HISTFILE=$HOME/.zsh_history
@@ -123,13 +128,6 @@ fi
 #  alias va='test -d venv && source ./venv/bin/activate || echo "No Virtualenv in current folder."'
   alias djm="python3 manage.py"
   alias djs="python3 manage.py runserver"
-  export PATH=~/.local/bin:$PATH
-  export PATH=~/.bin:$PATH
-  export PATH=~/.local/lib:$PATH
-  export PIPENV_VERBOSITY=-1
-  NPM_PACKAGES="${HOME}/.npm-packages"
-
-  export PATH="$NPM_PACKAGES/bin:$PATH"
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
     unset MANPATH # delete if you already modified MANPATH elsewhere in your config
