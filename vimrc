@@ -7,14 +7,14 @@ call vundle#begin()
 "Plugin 'morhetz/gruvbox'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
+"Plugin 'nvie/vim-flake8'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'dracula/vim'
 Plugin 'easymotion/vim-easymotion'
 "Plugin 'metakirby5/codi.vim'
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
 call vundle#end()
 
