@@ -4,7 +4,7 @@ antigen use oh-my-zsh
 #antigen bundle pipenv
 antigen bundle django
 #antigen bundle debian
-antigen bundle ssh-agent
+#antigen bundle ssh-agent
 antigen bundle git
 # antigen bundle autojump
 antigen bundle pip
@@ -91,7 +91,12 @@ zstyle ':completion:*' menu select # select completions with arrow keys
 zstyle ':completion:*' group-name '' # group results by category
 zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
 
-
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    eval "$(<~/.ssh-agent-thing)"
+fi
 
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
