@@ -128,7 +128,17 @@ fi
 #  alias va='test -d venv && source ./venv/bin/activate || echo "No Virtualenv in current folder."'
   alias djm="python3 manage.py"
   alias djs="python3 manage.py runserver"
-
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-    unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-    export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+# ls, the common ones I use a lot shortened for rapid fire usage
+alias l='ls -lFh'     #size,show type,human readable
+alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
+alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
+alias ll='ls -l'      #long list
+alias ldot='ls -ld .*'
+alias lS='ls -1FSsh'
+alias lart='ls -1Fcart'
+alias d='dirs -v | head -10'
+alias md='mkdir -p'
+alias df='df -h'
+alias du='du -h -d 2'
+alias lrt='ls -1Fcrt'
