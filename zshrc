@@ -60,7 +60,7 @@ antibody bundle denysdovhan/spaceship-prompt
 )
   SPACESHIP_RPROMPT_ORDER=(
     git
-    docker
+   #docker
    #venv
    #pyenv
 
@@ -126,6 +126,7 @@ fi
 #
 #  alias venv-stop='deactivate'
 #  alias va='test -d venv && source ./venv/bin/activate || echo "No Virtualenv in current folder."'
+  alias djsr='python manage.py shell_plus --ipython' 
   alias djm="python3 manage.py"
   alias djs="python3 manage.py runserver"
 # ls, the common ones I use a lot shortened for rapid fire usage
