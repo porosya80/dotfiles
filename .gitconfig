@@ -1,0 +1,7 @@
+[user]
+	name = Dmytro Myk
+	email = porosya@gmail.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
