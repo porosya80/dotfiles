@@ -140,3 +140,5 @@ alias du='du -h -d 2'
 alias lrt='ls -1Fcrt --color=auto'
 
 eval "$(starship init zsh)"
+
+PATH=~/.console-ninja/.bin:$PATH
