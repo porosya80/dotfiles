@@ -7,3 +7,12 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+
+[alias]
+	lol = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
+  # Diff, Status
+  df = diff --color=always --color-words --abbrev
+  st = status -s
+  last = log -1 HEAD
+  unstage = reset HEAD --
