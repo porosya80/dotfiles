@@ -37,3 +37,6 @@ abbr -a ddd "python manage.py dumpdata"
 abbr -a dld "python manage.py loaddata"
 abbr -a dt "python manage.py test"
 
+
+alias portastart "vboxmanage startvm OLE9v6 --type headless"
+alias portastop "vboxmanage controlvm OLE9v6 acpipowerbutton"
