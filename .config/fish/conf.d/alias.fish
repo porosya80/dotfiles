@@ -45,3 +45,6 @@ abbr -a gcm "git commit -m "
 abbr -a gco "git checkout"
 abbr -a gaa "git add ."
 abbr -a ga "git add"
+
+alias portastart "vboxmanage startvm OLE9v6 --type headless"
+alias portastop "vboxmanage controlvm OLE9v6 acpipowerbutton"
