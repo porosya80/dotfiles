@@ -48,3 +48,4 @@ abbr -a ga "git add"
 
 alias portastart "vboxmanage startvm OLE9v6 --type headless"
 alias portastop "vboxmanage controlvm OLE9v6 acpipowerbutton"
+alias s="kitten ssh"
