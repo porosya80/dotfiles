@@ -142,3 +142,6 @@ alias lrt='ls -1Fcrt --color=auto'
 eval "$(starship init zsh)"
 
 PATH=~/.console-ninja/.bin:$PATH
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
