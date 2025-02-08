@@ -13,3 +13,5 @@ if not set -q SSH_CONNECTION
 end
 
 
+uv generate-shell-completion fish | source
+uvx --generate-shell-completion fish | source
