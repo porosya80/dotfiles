@@ -8,7 +8,7 @@ export GPG_TTY=$(tty)
 yadm decrypt
 
 sudo apt update
-sudo add-apt-repository ppa:fish-shell/release-3 -y
+sudo add-apt-repository ppa:fish-shell/release-4 -y
 sudo apt install -y gpg
 sudo mkdir -p /etc/apt/keyrings
 wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
@@ -18,24 +18,14 @@ sudo apt update
 sudo apt install -y eza fish fd-find bat mc python3-venv build-essential
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
-echo "Installing NodeJs"
-curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - && sudo apt-get install -y nodejs
 
 
-mkdir -p ~/.local/bin/ 
+
+mkdir -p ~/.local/bin/
 ln -s $(which fdfind) ~/.local/bin/fd
 ln -s /usr/bin/batcat ~/.local/bin/bat
-echo "Installing fzf"
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
 
-echo "Installing Nvim"
-sudo snap install nvim --classic
-mkdir -p ~/temp/
-mv ~/.config/nvim ~/temp/
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-mv -f ~/temp/nvim/lua/custom ~/.config/nvim/lua
+
+
 echo "Install spaceship"
 curl -sS https://starship.rs/install.sh | sh
-
-chsh -s $(which fish) $(whoami)
